@@ -356,6 +356,19 @@
          <string>Arreter de tirer</string>
         </property>
        </widget>
+       <widget class="QCheckBox" name="autoBox">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>450</y>
+          <width>85</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Mode auto</string>
+        </property>
+       </widget>
       </widget>
      </widget>
     </item>
@@ -599,6 +612,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>autoBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>onAuto(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>514</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>395</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>onConnectButtonClicked()</slot>
@@ -615,5 +644,6 @@
   <slot>onDeplacerB()</slot>
   <slot>onTirer()</slot>
   <slot>onStopTirer()</slot>
+  <slot>onAuto(bool)</slot>
  </slots>
 </ui>
